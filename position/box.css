@@ -1,0 +1,8 @@
+.bar{
+
+    position:fixed;
+    bottom:0px;
+    width: 1500px;
+    height:50px;
+    background-color:lightgrey;
+}
