@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- Strutsの詳細設定 -->
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<!-- 対象のpackageを設定 -->
+	<package name="com.internousdev.template.action" extends="struts-default">
+
+
+		<!-- HomeAction -->
+		<action name="HomeAction" class="com.localhost.ecsite.action.HomeAction" method="execute">
+			<result name="success">login.jsp</result>
+		</action>
+
+
+		<!-- GoUserCreateAction -->
+		<action name="GoUserCreateAction" class="com.localhost.ecsite.action.GoUserCreateAction" method="execute">
+
+			<result name="success"> UserCreate.jsp</result>
+		</action>
+
+
+		<!-- UserCreateAction -->
+		<action name="UserCreateAction" class="com.localhost.ecsite.action.UserCreateAction" method="execute">
+
+			<result name="success">UserCreateConfirm.jsp</result>
+			<result name="error">UserCreate.jsp</result>
+		</action>
+
+		<!-- UserCreateConfirmAction -->
+		<action name="UserCreateConfirmAction" class="com.localhost.ecsite.action.UserCreateConfirmAction" method="execute">
+
+			<result name="success">UserCreateComplate.jsp</result>
+		</action>
+
+
+		<!-- LoginAction -->
+		<action name="LoginAction" class="com.localhost.ecsite.action.LoginAction" method="execute">
+			<result name="success">MyPage.jsp</result>
+			<result name="error">login.jsp</result>
+
+		</action>
+
+		<!-- MyPageAction -->
+		<action name="MyPageAction" class="com.localhost.ecsite.action.MyPageAction" method="execute">
+			<result name="success">item.jsp</result>
+		</action>
+
+			<!-- itemAction -->
+		<action name="ItemAction" class="com.localhost.ecsite.action.ItemAction" method="execute">
+			<result name="success">confirm.jsp</result>
+		</action>
+
+
+				<!-- ConfirmAction -->
+		<action name="ConfirmAction" class="com.localhost.ecsite.action.ConfirmAction" method="execute">
+
+			<result name="success">complate.jsp</result>
+		</action>
+
+
+				<!-- HistoryAction -->
+		<action name="HistoryAction" class="com.localhost.ecsite.action.HistoryAction" method="execute">
+			<result name="success"> History.jsp</result>
+		</action>
+
+				<!-- UpdatePasswordAction -->
+		<action name="UpdatePasswordAction" class="com.localhost.ecsite.action.UpdatePasswordAction" method="execute">
+
+			<result name="success"> UpdatePassword.jsp</result>
+		</action>
+
+			<!-- UpdatePasswordComplateAction -->
+		<action name="UpdatePasswordComplateAction" class="com.localhost.ecsite.action.UpdatePasswordComplateAction" method="execute">
+
+			<result name="success"> UpdatePasswordComplate.jsp</result>
+			<result name="error">UpdatePassword.jsp</result>
+		</action>
+
+
+		<!-- UnsubscribeAction -->
+		<action name="UnsubscribeAction" class="com.localhost.ecsite.action.UnsubscribeAction" method="execute">
+
+			<result name="success"> Unsubscribe.jsp</result>
+		</action>
+
+		<!-- UnsubscribeComplateAction-->
+		<action name="UnsubscribeComplateAction" class="com.localhost.ecsite.action.UnsubscribeComplateAction" method="execute">
+
+			<result name="success"> UnsubscribeComplate.jsp</result>
+
+		</action>
+
+
+		<!-- GoMyPageAction -->
+		<action name="GoMyPageAction" class="com.localhost.ecsite.action.GoMyPageAction" method="execute">
+
+			<result name="success"> MyPage.jsp</result>
+		</action>
+
+		<!-- GoHomeAction -->
+		<action name="GoHomeAction" class="com.localhost.ecsite.action.GoHomeAction" method="execute">
+
+			<result name="success"> home.jsp</result>
+		</action>
+
+		<!-- BackItemAction -->
+		<action name="BackItemAction" class="com.localhost.ecsite.action.BackItemAction" method="execute">
+
+			<result name="success"> item.jsp</result>
+		</action>
+
+
+		<!-- LogoutAction -->
+		<action name="LogoutAction" class="com.localhost.ecsite.action.LogoutAction" method="execute">
+
+			<result name="success"> home.jsp</result>
+		</action>
+
+	</package>
+</struts>
